@@ -1,26 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-rive-bg: #0E0C0B;
+  --color-rive-surface: #1A1816;
+  --color-rive-surface-hover: #211f1c;
+  --color-rive-border: #2A2725;
+  --color-rive-border-hover: #3A3735;
+  --color-rive-accent: #FFA41C;
+  --color-rive-accent-hover: #FFB340;
+  --color-rive-accent-muted: rgba(255, 164, 28, 0.10);
+  --color-rive-accent-glow: rgba(255, 164, 28, 0.06);
+  --color-rive-text: #F5F0EB;
+  --color-rive-text-secondary: #9A9490;
+  --color-rive-text-muted: #6A6560;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --animate-fade-in: fade-in 0.6s ease-out both;
+  --animate-slide-up: slide-up 0.6s ease-out both;
+  --animate-slide-up-delay: slide-up 0.6s ease-out 0.15s both;
+  --animate-slide-up-delay-2: slide-up 0.6s ease-out 0.3s both;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2A2725 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #2A2725;
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #3A3735;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #0E0C0B;
+  color: #F5F0EB;
+  font-family: "Inter", sans-serif;
+}
+
+.hero-grid {
+  background-size: 64px 64px;
+  background-image:
+    linear-gradient(to right, rgba(255, 164, 28, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 164, 28, 0.04) 1px, transparent 1px);
+}
+
+.hero-grid-fade {
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 100%);
+}
+
+.checkerboard {
+  background-color: #1A1816;
+  background-image:
+    linear-gradient(45deg, #151311 25%, transparent 25%),
+    linear-gradient(-45deg, #151311 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #151311 75%),
+    linear-gradient(-45deg, transparent 75%, #151311 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
 }
