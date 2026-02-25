@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         <div className="animate-fade-in mb-6">
           <span className="inline-block rounded-full border border-rive-border bg-rive-surface px-4 py-1.5 text-xs font-medium tracking-wide text-rive-text-secondary">
-            100% client-side &middot; No uploads &middot; Free forever
+            100% client-side &middot; Free forever
           </span>
         </div>
 
@@ -32,7 +32,7 @@ export default function Hero() {
 
         <p className="animate-slide-up-delay mx-auto mb-14 max-w-xl text-base leading-relaxed text-rive-text-secondary md:text-lg">
           Extract images, fonts, and audio from your Rive files instantly.
-          Preview animations, inspect structure, and export assets.
+          Inspect structure and export assets.
         </p>
 
         <div className="animate-slide-up-delay mb-14 grid grid-cols-1 gap-4 sm:grid-cols-3">

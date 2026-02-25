@@ -1,7 +1,7 @@
 export const FEATURES = [
   {
     title: "Preview",
-    description: "See your Rive animation playing live and interact with it directly in the browser.",
+    description: "Browse artboards, animations, state machines, and their inputs at a glance.",
     iconId: "preview" as const,
   },
   {
